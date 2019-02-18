@@ -151,8 +151,8 @@
 
 #if defined(OMNIBUSF4V3)
 #define USE_SOFTSERIAL1
-#define SOFTSERIAL_1_RX_PIN     PC6 //shared with UART6_TX
-#define SOFTSERIAL_1_TX_PIN     PC6 //shared with UART6_TX
+#define SOFTSERIAL_1_RX_PIN     PA0 //on RSSI PIN 
+#define SOFTSERIAL_1_TX_PIN     PA0 //on RSSI PIN
 
 #define SERIAL_PORT_COUNT       5 //VCP, USART1, USART3, USART6, SOFTSERIAL1
 #else
@@ -219,7 +219,8 @@
 #ifdef DYSF4PRO
     #define ADC_CHANNEL_3_PIN               PC3
 #else
-    #define ADC_CHANNEL_3_PIN               PA0
+    //#define ADC_CHANNEL_3_PIN               PA0
+    #define ADC_CHANNEL_3_PIN               PC1
 #endif
 
 #define CURRENT_METER_ADC_CHANNEL       ADC_CHN_1
